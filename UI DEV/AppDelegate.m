@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h";
 
 @interface AppDelegate ()
 
@@ -17,7 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ViewController *sree=[[ViewController alloc ]init];
+    UINavigationController*sree1=[[UINavigationController alloc]initWithRootViewController:sree];
+    self.window.rootViewController=sree1;
     return YES;
+
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

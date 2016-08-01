@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 @property(nonatomic, strong) UIImageView *imgView, *imgViewDown;
+@property(nonatomic, readonly, copy) NSArray <__kindof UIView *> *subviews;
 
 @end
 

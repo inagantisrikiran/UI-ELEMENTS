@@ -16,6 +16,11 @@
 		EBD1DBF31D45B95A005F5281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD1DBF11D45B95A005F5281 /* LaunchScreen.storyboard */; };
 		EBD1DBFE1D45B95A005F5281 /* UI_DEVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD1DBFD1D45B95A005F5281 /* UI_DEVTests.m */; };
 		EBD1DC091D45B95A005F5281 /* UI_DEVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD1DC081D45B95A005F5281 /* UI_DEVUITests.m */; };
+		EBE610F71D48774C00ED3678 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE610F61D48774C00ED3678 /* WebViewController.m */; };
+		EBE610FA1D4877E900ED3678 /* UIViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE610F91D4877E900ED3678 /* UIViewsViewController.m */; };
+		EBE612B91D49488300ED3678 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE612B81D49488300ED3678 /* MapKit.framework */; };
+		EBE612BB1D49489900ED3678 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE612BA1D49489900ED3678 /* CoreLocation.framework */; };
+		EBE612BE1D4948C400ED3678 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE612BD1D4948C400ED3678 /* LocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,14 @@
 		EBD1DC041D45B95A005F5281 /* UI DEVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI DEVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD1DC081D45B95A005F5281 /* UI_DEVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UI_DEVUITests.m; sourceTree = "<group>"; };
 		EBD1DC0A1D45B95A005F5281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE610F51D48774C00ED3678 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		EBE610F61D48774C00ED3678 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		EBE610F81D4877E900ED3678 /* UIViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewsViewController.h; sourceTree = "<group>"; };
+		EBE610F91D4877E900ED3678 /* UIViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewsViewController.m; sourceTree = "<group>"; };
+		EBE612B81D49488300ED3678 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EBE612BA1D49489900ED3678 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EBE612BC1D4948C400ED3678 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		EBE612BD1D4948C400ED3678 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE612BB1D49489900ED3678 /* CoreLocation.framework in Frameworks */,
+				EBE612B91D49488300ED3678 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 		EBD1DBD41D45B95A005F5281 = {
 			isa = PBXGroup;
 			children = (
+				EBE612BA1D49489900ED3678 /* CoreLocation.framework */,
+				EBE612B81D49488300ED3678 /* MapKit.framework */,
 				EBD1DBDF1D45B95A005F5281 /* UI DEV */,
 				EBD1DBFC1D45B95A005F5281 /* UI DEVTests */,
 				EBD1DC071D45B95A005F5281 /* UI DEVUITests */,
@@ -107,6 +124,12 @@
 				EBD1DBE41D45B95A005F5281 /* AppDelegate.m */,
 				EBD1DBE61D45B95A005F5281 /* ViewController.h */,
 				EBD1DBE71D45B95A005F5281 /* ViewController.m */,
+				EBE610F51D48774C00ED3678 /* WebViewController.h */,
+				EBE612BC1D4948C400ED3678 /* LocationViewController.h */,
+				EBE612BD1D4948C400ED3678 /* LocationViewController.m */,
+				EBE610F61D48774C00ED3678 /* WebViewController.m */,
+				EBE610F81D4877E900ED3678 /* UIViewsViewController.h */,
+				EBE610F91D4877E900ED3678 /* UIViewsViewController.m */,
 				EBD1DBE91D45B95A005F5281 /* Main.storyboard */,
 				EBD1DBEF1D45B95A005F5281 /* Assets.xcassets */,
 				EBD1DBF11D45B95A005F5281 /* LaunchScreen.storyboard */,
@@ -277,6 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBD1DBE81D45B95A005F5281 /* ViewController.m in Sources */,
+				EBE610FA1D4877E900ED3678 /* UIViewsViewController.m in Sources */,
+				EBE612BE1D4948C400ED3678 /* LocationViewController.m in Sources */,
+				EBE610F71D48774C00ED3678 /* WebViewController.m in Sources */,
 				EBD1DBE51D45B95A005F5281 /* AppDelegate.m in Sources */,
 				EBD1DBE21D45B95A005F5281 /* main.m in Sources */,
 				EBD1DBEE1D45B95A005F5281 /* UI_DEV.xcdatamodeld in Sources */,
@@ -505,6 +531,7 @@
 				EBD1DC0F1D45B95A005F5281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBD1DC101D45B95A005F5281 /* Build configuration list for PBXNativeTarget "UI DEVTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +540,7 @@
 				EBD1DC121D45B95A005F5281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBD1DC131D45B95A005F5281 /* Build configuration list for PBXNativeTarget "UI DEVUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +549,7 @@
 				EBD1DC151D45B95A005F5281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

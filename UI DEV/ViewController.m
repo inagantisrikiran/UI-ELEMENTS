@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "WebViewController.h"
+#import "UIViewsViewController.h"
+#import  "LocationViewController.h"
 
 @interface ViewController ()
 {
@@ -24,28 +27,43 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor=[UIColor blueColor];
     
-    
+
     self.imgView = [[UIImageView alloc]initWithFrame:CGRectMake(125, 200, 200, 190)];
     [self.imgView setImage:[UIImage imageNamed:@"sree1"]];
     [self.imgView setContentMode:UIViewContentModeScaleAspectFit];
     [self.view addSubview:self.imgView];
     
-    self.imgViewDown = [[UIImageView alloc]initWithFrame:CGRectMake(125, 450, 200, 190)];
+    self.imgViewDown = [[UIImageView alloc]initWithFrame:CGRectMake(130, 450, 200, 190)];
     [self.imgViewDown setImage:[UIImage imageNamed:@"sree1"]];
     [self.imgViewDown setContentMode:UIViewContentModeScaleAspectFit];
     [self.view addSubview:_imgViewDown];
     
-    UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectMake(230, 135, 0, 0)];
+    UISwitch *mySwitch = [[UISwitch alloc] initWithFrame:CGRectMake(30, 135, 0, 0)];
     mySwitch.tintColor=[UIColor cyanColor];
     [mySwitch addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:mySwitch];
+    
+    UIButton *mybutton2=[[UIButton alloc]initWithFrame:CGRectMake(330, 135, 90, 40)];
+    [self.view addSubview:mybutton2];
+    [mybutton2 addTarget:self action:@selector(clickEvent2:)forControlEvents:UIControlEventTouchUpInside];
+    [mybutton2 setTitle:@"Button" forState:UIControlStateNormal];
+    
 
-    UIButton *mybutton=[[UIButton alloc]initWithFrame:CGRectMake(30, 135, 90, 40)];
+    UIButton *mybutton=[[UIButton alloc]initWithFrame:CGRectMake(230, 135, 90, 40)];
     [self.view addSubview:mybutton];
     [mybutton addTarget:self action:@selector(clickEvent:)forControlEvents:UIControlEventTouchUpInside];
     [mybutton setTitle:@"Button" forState:UIControlStateNormal];
     
+    UIButton *mybutton1=[[UIButton alloc]initWithFrame:CGRectMake(130, 135, 90, 40)];
+    [self.view addSubview:mybutton1];
+    [mybutton1 addTarget:self action:@selector(clickEvent1:)forControlEvents:UIControlEventTouchUpInside];
+    [mybutton1 setTitle:@"Button" forState:UIControlStateNormal];
     
+    UIView *myview=[[UIView alloc] initWithFrame:CGRectMake(10,850, 10, 100)];
+    myview.backgroundColor=[UIColor whiteColor];
+    [self.view addSubview:myview];
+
+                    
     activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(160, 360);
@@ -54,14 +72,11 @@
     [activityIndicator startAnimating];
     
     [self.view addSubview:activityIndicator];
-    [self performSelector:@selector(stopActivity)withObject:nil afterDelay:30];
+    [self performSelector:@selector(stopActivity)withObject:nil afterDelay:10];
     
 
-
-
-
     
-    NSArray * items = [[NSArray alloc]initWithObjects:@"sree1",@"sree2",@"sree", nil];
+ NSArray * items = [[NSArray alloc]initWithObjects:@"sree1",@"sree2",@"sree", nil];
     
     
     UISegmentedControl * mysegment = [[UISegmentedControl alloc]initWithItems:items];
@@ -106,15 +121,26 @@
     
     if([sender isOn]){
         NSLog(@"Switch is ON");
+        
+        {
+            UIViewsViewController *data1=[[UIViewsViewController alloc]init];
+            [self.navigationController pushViewController:data1 animated:YES ];
+            
+        }
+
+        
     } else{
         NSLog(@"Switch is OFF");
     }
     
 }
-    -(void)stopActivity
-    {
-        [activityIndicator removeFromSuperview];
-    }
+
+
+
+-(void)stopActivity
+{
+    [activityIndicator removeFromSuperview];
+}
 
 
 
@@ -122,30 +148,25 @@
 
 
 
-
-
-
-
-
+-(void)clickEvent1:(id)sender
+{
+    WebViewController *data=[[WebViewController alloc]init];
+    [self.navigationController pushViewController:data animated:YES ];
     
-    
-    
-
-
-
-    
-    
-    
+}
 
     
 
-
+-(void)clickEvent2:(id)sender
+{
+    LocationViewController *data1=[[LocationViewController alloc]init];
+    [self.navigationController pushViewController:data1 animated:YES ];
     
-    
-    
+}
 
 
-- (void)didReceiveMemoryWarning {
+
+ - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
